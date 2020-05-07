@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Lq-Oz-xwL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Object Detection-->
+        <scene sceneID="mLU-5u-dlB">
+            <objects>
+                <viewController id="dV8-cD-DE0" customClass="DetectionViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BkQ-D6-lh8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7I-0O-inj" userLabel="Video Preview">
+                                <rect key="frame" x="0.0" y="88" width="414" height="709"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="709" id="YaA-bV-8zh"/>
+                                    <constraint firstAttribute="width" constant="414" id="x0p-Z3-4sP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwI-Km-b3w" userLabel="Boxes View" customClass="DrawingBoundingBoxView" customModule="FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="709"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="P2c-Q7-wkx"/>
+                                    <constraint firstAttribute="height" constant="709" id="yD2-1g-9qO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wwI-Km-b3w" firstAttribute="trailing" secondItem="cRT-gV-R0P" secondAttribute="trailing" id="Sqx-dz-SeP"/>
+                            <constraint firstItem="wwI-Km-b3w" firstAttribute="top" secondItem="cRT-gV-R0P" secondAttribute="top" id="ZCa-XM-2Ei"/>
+                            <constraint firstItem="R7I-0O-inj" firstAttribute="top" secondItem="cRT-gV-R0P" secondAttribute="top" id="aNr-oH-ZJc"/>
+                            <constraint firstItem="wwI-Km-b3w" firstAttribute="leading" secondItem="cRT-gV-R0P" secondAttribute="leading" id="r2I-iC-rQi"/>
+                            <constraint firstItem="R7I-0O-inj" firstAttribute="trailing" secondItem="cRT-gV-R0P" secondAttribute="trailing" id="yth-cp-Le8"/>
+                            <constraint firstItem="R7I-0O-inj" firstAttribute="leading" secondItem="cRT-gV-R0P" secondAttribute="leading" id="ze7-z5-ULr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cRT-gV-R0P"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Object Detection" id="xfB-KP-90Z"/>
+                    <connections>
+                        <outlet property="boxesView" destination="wwI-Km-b3w" id="rgm-Ff-fKf"/>
+                        <outlet property="videoPreview" destination="R7I-0O-inj" id="F43-Mm-YcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4e-t8-nlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.5797101449277" y="-48.214285714285715"/>
+        </scene>
+        <!--Object Detection-->
+        <scene sceneID="aVE-ej-V1C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Lq-Oz-xwL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Object Detection" image="cloud.fill" catalog="system" id="xwe-it-vYT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SAR-O3-3uZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dV8-cD-DE0" kind="relationship" relationship="rootViewController" id="kOQ-AG-2xg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FA-i1-cYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="-48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="84"/>
+    </resources>
+</document>

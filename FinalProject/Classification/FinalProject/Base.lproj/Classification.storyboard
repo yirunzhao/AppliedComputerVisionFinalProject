@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vst-op-XoG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Claasification-->
+        <scene sceneID="Sez-wX-ezL">
+            <objects>
+                <viewController id="wUH-mI-Amk" customClass="ClassificationViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v17-js-Un1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-a9-xPZ">
+                                <rect key="frame" x="39" y="118" width="336" height="335"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emm-Zi-Qdt">
+                                <rect key="frame" x="39" y="538" width="336" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-jg-X84">
+                                <rect key="frame" x="39" y="598" width="336" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vuu-jg-X84" firstAttribute="leading" secondItem="Isg-Vh-G1L" secondAttribute="leading" constant="39" id="7TE-8B-fM4"/>
+                            <constraint firstItem="Vuu-jg-X84" firstAttribute="top" secondItem="emm-Zi-Qdt" secondAttribute="bottom" constant="24" id="7z0-rO-pb1"/>
+                            <constraint firstItem="Isg-Vh-G1L" firstAttribute="trailing" secondItem="Vuu-jg-X84" secondAttribute="trailing" constant="39" id="CoT-Qf-kBa"/>
+                            <constraint firstItem="emm-Zi-Qdt" firstAttribute="leading" secondItem="Isg-Vh-G1L" secondAttribute="leading" constant="39" id="MxD-xr-mV4"/>
+                            <constraint firstItem="emm-Zi-Qdt" firstAttribute="centerX" secondItem="v17-js-Un1" secondAttribute="centerX" id="QXp-mm-7fc"/>
+                            <constraint firstItem="emm-Zi-Qdt" firstAttribute="top" secondItem="9Xh-a9-xPZ" secondAttribute="bottom" constant="85" id="SLZ-Mz-aZ8"/>
+                            <constraint firstItem="9Xh-a9-xPZ" firstAttribute="centerX" secondItem="v17-js-Un1" secondAttribute="centerX" id="YfF-La-wUI"/>
+                            <constraint firstItem="Isg-Vh-G1L" firstAttribute="trailing" secondItem="emm-Zi-Qdt" secondAttribute="trailing" constant="39" id="ZtB-FM-Kxz"/>
+                            <constraint firstItem="9Xh-a9-xPZ" firstAttribute="centerX" secondItem="v17-js-Un1" secondAttribute="centerX" id="cRq-u7-aue"/>
+                            <constraint firstItem="9Xh-a9-xPZ" firstAttribute="leading" secondItem="Isg-Vh-G1L" secondAttribute="leading" constant="39" id="hra-Av-UaS"/>
+                            <constraint firstItem="emm-Zi-Qdt" firstAttribute="centerX" secondItem="v17-js-Un1" secondAttribute="centerX" id="iwx-md-oFa"/>
+                            <constraint firstItem="9Xh-a9-xPZ" firstAttribute="top" secondItem="Isg-Vh-G1L" secondAttribute="top" constant="140" id="pF9-bE-IKN"/>
+                            <constraint firstItem="Isg-Vh-G1L" firstAttribute="trailing" secondItem="9Xh-a9-xPZ" secondAttribute="trailing" constant="39" id="rMH-lK-lcY"/>
+                            <constraint firstItem="Vuu-jg-X84" firstAttribute="centerX" secondItem="v17-js-Un1" secondAttribute="centerX" id="w5d-nJ-5P6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Isg-Vh-G1L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Claasification" id="CEC-d8-naV">
+                        <barButtonItem key="leftBarButtonItem" image="camera" catalog="system" id="pyV-hk-PxU">
+                            <connections>
+                                <action selector="useCamera:" destination="wUH-mI-Amk" id="1Jl-FZ-AIl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Library" id="WnX-Jc-ZFV">
+                            <connections>
+                                <action selector="useLibrary:" destination="wUH-mI-Amk" id="sCm-ZD-U3y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detectAccuracy" destination="Vuu-jg-X84" id="796-bx-LC1"/>
+                        <outlet property="imageView" destination="9Xh-a9-xPZ" id="Hku-0E-Vdl"/>
+                        <outlet property="objectClass" destination="emm-Zi-Qdt" id="PWY-B0-SZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bM9-Tu-1W5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.5797101449277" y="-731.25"/>
+        </scene>
+        <!--Image Classification-->
+        <scene sceneID="PD5-rZ-hoz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vst-op-XoG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Image Classification" image="paperplane.fill" catalog="system" id="3MH-fZ-eUp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U1O-Od-Dmy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wUH-mI-Amk" kind="relationship" relationship="rootViewController" id="dvn-Zb-dE3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lki-1V-MZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-731"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
